@@ -11,19 +11,34 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Poppins"
+			rel="stylesheet"
+		/>
 		<title>Astro + TailwindCSS</title>
+		<style>
+			@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+			@tailwind base;
+			@tailwind components;
+			@tailwind utilities;
+		</style>
 	</head>
 
 	<body>
-		<div class="grid place-items-center h-screen content-center">
-			<iframe
-				width="560"
-				height="315"
-				src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-				title="YouTube video player"
-				frameborder="0"
-				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-				allowfullscreen></iframe>
+		<div class="flex flex-col items-center w-[80%] lg:w-[50%] mx-auto">
+			<h1 class="pt-10 pb-10 font-black text-3xl lg:text-5xl font-poppins">
+				Astro Youtube embed
+			</h1>
+			<div
+				class="relative h-0 overflow-hidden max-w-full w-full"
+				style="padding-bottom: 50%"
+			>
+				<iframe
+					src="https://www.youtube.com/embed/j5a0jTc9S10"
+					frameborder="0"
+					allowfullscreen
+					class="absolute top-0 left-0 w-full h-full"></iframe>
+			</div>
 		</div>
 	</body>
 </html>
